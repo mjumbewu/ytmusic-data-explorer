@@ -1,0 +1,11 @@
+.most-played-artists-list-wrapper,
+.most-played-songs-list-wrapper {
+  height: 14rem;
+  overflow-y: auto;
+  border: 1px solid black;
+}
+
+#uiMostPlayedArtistsList,
+#uiMostPlayedSongsList {
+  width: 100%;
+}

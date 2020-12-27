@@ -1,0 +1,80 @@
+<html>
+<head>
+  <title>Your YouTube Music Data Explorer</title>
+
+  <script src="https://apis.google.com/js/api.js"></script>
+  <script src="js/ytm_auth.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div id="uiDataLoader">
+    <form>
+      <input type="file">
+      <button type="submit">Load Data...</button>
+    </form>
+  </div>
+
+  <div id="uiMostPlayedSongs">
+    <script id="tmpMostPlayedSongListItem"></script>
+  </div>
+
+  <div id="uiMostPlayedArtists">
+    <header>
+      <h2>Most Played Artists</h2>
+    </header>
+    <div class="most-played-artists-list-wrapper">
+      <table id="uiMostPlayedArtistsList">
+        <thead>
+          <tr>
+            <th> Artists </th>
+            <th> # of Songs Played </th>
+            <th> Total time listened </th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+
+      <script type="text/x-template" id="tmpMostPlayedArtistsListItem">
+        <tr>
+          <td class="artist-name">${name}</td>
+          <td class="artist-play-count">${playCount}</td>
+          <td class="artist-play-time">${playTime ? playTime.toFixed(2) : 'no'} hours</td>
+        </tr>
+      </script>
+    </div>
+  </div>
+
+  <div id="uiMostPlayedSongs">
+    <header>
+      <h2>Most Played Songs</h2>
+    </header>
+    <div class="most-played-songs-list-wrapper">
+      <table id="uiMostPlayedSongsList">
+        <thead>
+          <tr>
+            <th> Title </th>
+            <th> Artist </th>
+            <th> # of Plays </th>
+            <th> Total time listened </th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+
+      <script type="text/x-template" id="tmpMostPlayedSongsListItem">
+        <tr>
+          <td class="song-title">${title}</td>
+          <td class="song-artist-name">${artistName}</td>
+          <td class="song-play-count">${playCount}</td>
+          <td class="song-play-time">${playTime ? playTime.toFixed(2) : 'no'} hours</td>
+        </tr>
+      </script>
+    </div>
+  </div>
+
+  <script src="js/main.js" type="module"></script>
+</body>
+</html>
