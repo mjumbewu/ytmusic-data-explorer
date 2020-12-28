@@ -7,6 +7,15 @@
 </head>
 
 <body>
+  <div id="uiControls">
+    <form>
+      <input type="radio" name="order-by" id="uiOrderByPlayCount" value="play count" checked="checked">
+      <label for="uiOrderByPlayCount">Order by Play Count</label>
+      <input type="radio" name="order-by" id="uiOrderByPlayTime" value="play time">
+      <label for="uiOrderByPlayTime">Order by Play Time</label>
+    </form>
+  </div>
+
   <div id="uiDataLoader">
     <form>
       <input type="file" id="uiDataLoaderFile">
@@ -27,10 +36,6 @@
         <p> <small>Instructions adapted from <a href="https://github.com/cinfulsinamon/ytmusic_wrapped" target="_blank">ytmusic_wrapped documentation</a>.</small> </p>
       </div>
     </form>
-  </div>
-
-  <div id="uiMostPlayedSongs">
-    <script id="tmpMostPlayedSongListItem"></script>
   </div>
 
   <div id="uiMostPlayedArtists">

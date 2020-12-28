@@ -12,7 +12,7 @@ let templates = {
 }
 
 async function updateUI(state) {
-  if (state.data) {
+  if (state.data.length > 0) {
     document.querySelector('body').classList.add('data-loaded')
     renderMostPlayedArtists(state)
     renderMostPlayedSongs(state)

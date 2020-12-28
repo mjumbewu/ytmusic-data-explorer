@@ -21,7 +21,20 @@ async function onDataChanged(evt) {
   await updateUI(state)
 }
 
+async function onOrderByChanged(evt) {
+  if (this.checked) {
+    state.sortArtistsBy = this.value
+    state.sortSongsBy = this.value
+    await updateUI(state)
+  }
+}
+
 let uiDataLoader = document.querySelector('#uiDataLoaderFile')
 uiDataLoader.addEventListener('change', onSubmitDataLoader)
 
 window.addEventListener('data-changed', onDataChanged)
+
+let uiOrderByPlayCount = document.querySelector('#uiOrderByPlayCount')
+uiOrderByPlayCount.addEventListener('change', onOrderByChanged)
+let uiOrderByPlayTime = document.querySelector('#uiOrderByPlayTime')
+uiOrderByPlayTime.addEventListener('change', onOrderByChanged)
