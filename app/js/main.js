@@ -1,5 +1,8 @@
 import { loadDataFromForm } from './ytm_data.js'
+import { initGapiClient } from './ytm_auth.js'
 import { updateUI } from './ui.js'
+
+gapi.load('client', initGapiClient);
 
 window.state = {
   data: [],

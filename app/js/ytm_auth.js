@@ -1,4 +1,4 @@
-async function init_gapi_client() {
+async function initGapiClient() {
   gapi.client.setApiKey('AIzaSyBMtW2xRRr-2N8pqtXvEYrc5uUNG29c2ec')
 
   await gapi.client.init({
@@ -15,4 +15,4 @@ async function init_gapi_client() {
   }
 }
 
-gapi.load('client', init_gapi_client);
+export { initGapiClient }
