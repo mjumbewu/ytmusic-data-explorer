@@ -11,6 +11,28 @@ body {
   align-items: center;
 }
 
+#uiDataLoader form {
+  display: flex;
+  flex-direction: column;
+}
+
+#uiDataLoaderFile {
+  display: none;
+}
+
+label[for="uiDataLoaderFile"] {
+  border: 3px dashed gray;
+  border-radius: 3px;
+  padding: 3rem;
+  margin: 1rem;
+  text-align: center;
+  background-color: #eee;
+}
+
+.instructions {
+  margin: 1rem;
+}
+
 .most-played-artists-list-wrapper,
 .most-played-songs-list-wrapper {
   height: 14rem;
@@ -29,7 +51,7 @@ body {
 }
 
 .data-loaded #uiDataLoader {
-  height: auto;
+  display: none;
 }
 
 .data-loaded #uiMostPlayedArtists,

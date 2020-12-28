@@ -1,6 +1,7 @@
 <html>
 <head>
   <title>Your YouTube Music Data Explorer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5.0, minimum-scale=1">
 
   <script src="https://apis.google.com/js/api.js"></script>
   <script src="js/ytm_auth.js"></script>
@@ -10,8 +11,23 @@
 <body>
   <div id="uiDataLoader">
     <form>
-      <input type="file">
-      <button type="submit">Load Data...</button>
+      <input type="file" id="uiDataLoaderFile">
+      <label for="uiDataLoaderFile"><strong>Choose your <em>watch-history.json</em> file</strong><br>or drag it here.</label>
+      <div class="instructions">
+        <p> Get your YouTube Music data in a <em>watch-history.json</em> file from Google Takeout: </p>
+        <ol>
+          <li>Go to <a href="https://takeout.google.com/" target="_blank">Google Takeout</a>.</li>
+          <li>Click <strong>Deselect All</strong> above the first checkbox.</li>
+          <li>Scroll all the way down to YouTube, and only check that box.</li>
+          <li>Click the button that says <strong>Multiple Formats</strong>.</li>
+          <li>Next to <strong>History</strong>, select the <strong>JSON</strong> option from the dropdown box and Click OK.</li>
+          <li>Click on the <strong>All YouTube data included</strong> button.</li>
+          <li>Click <strong>Deselect All</strong>, and then only check <strong>History</strong>. Click OK.</li>
+          <li>Scroll down and hit next step to finish your takeout.</li>
+          <li>Once you have your takeout file, extract the <em>watch-history.json</em> file from within the zip file.</li>
+        </ol>
+        <p> <small>Instructions adapted from <a href="https://github.com/cinfulsinamon/ytmusic_wrapped" target="_blank">ytmusic_wrapped documentation</a>.</small> </p>
+      </div>
     </form>
   </div>
 

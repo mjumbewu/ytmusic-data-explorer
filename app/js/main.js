@@ -9,7 +9,7 @@ window.state = {
 
 async function onSubmitDataLoader(evt) {
   evt.preventDefault()
-  const loadedDatas = await loadDataFromForm(this)
+  const loadedDatas = await loadDataFromForm(this.form)
   state.data.push(...loadedDatas)
   await updateUI(state)
 }
@@ -18,7 +18,7 @@ async function onDataChanged(evt) {
   await updateUI(state)
 }
 
-let uiDataLoader = document.querySelector('#uiDataLoader')
-uiDataLoader.querySelector('form').addEventListener('submit', onSubmitDataLoader)
+let uiDataLoader = document.querySelector('#uiDataLoaderFile')
+uiDataLoader.addEventListener('change', onSubmitDataLoader)
 
 window.addEventListener('data-changed', onDataChanged)
